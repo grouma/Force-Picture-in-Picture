@@ -1,9 +1,10 @@
 function findRoots(ele) {
-  return [
+  const shadowRoots = [
     ele,
     ...ele.querySelectorAll('*')
   ].filter(e => !!e.shadowRoot)
     .flatMap(e => [e.shadowRoot, ...findRoots(e.shadowRoot)])
+  return [...shadowRoots, document]
 }
 
 function findLargestPlayingVideo() {
