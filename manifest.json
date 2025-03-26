@@ -12,6 +12,9 @@
     "scripting",
     "activeTab"
   ],
+  "host_permissions": [
+   "<all_urls>"
+  ],
   "action": {
     "default_icon": {
       "19": "assets/icon19.png",
